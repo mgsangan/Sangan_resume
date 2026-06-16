@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume - Mark Gerard R. Sangan</title>
   <style>
-    /* General Styling */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -26,10 +25,17 @@
 
     /* Header */
     header {
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding-bottom: 20px;
       border-bottom: 2px solid #e0e0e0;
     }
+
+    .header-text {
+      flex: 1;
+    }
+
     header h1 {
       margin: 0;
       font-size: 2.2em;
@@ -41,7 +47,16 @@
       color: #555;
     }
 
-    /* Section Titles */
+    /* Profile Picture */
+    .profile-pic {
+      width: 192px;   /* 2 inches at 96dpi */
+      height: 192px;  /* 2 inches at 96dpi */
+      border-radius: 4px;
+      object-fit: cover;
+      border: 2px solid #0077b6;
+      margin-left: 20px;
+    }
+
     section h2 {
       font-size: 1.4em;
       color: #1a1a1a;
@@ -52,7 +67,6 @@
       letter-spacing: 1px;
     }
 
-    /* Content */
     section {
       margin: 25px 0;
     }
@@ -73,7 +87,6 @@
       margin-left: 8px;
     }
 
-    /* Summary Paragraph */
     .summary {
       font-size: 15px;
       color: #444;
@@ -84,9 +97,12 @@
 <body>
   <div class="container">
     <header>
-      <h1>Mark Gerard R. Sangan</h1>
-      <p>Email: mark01.sangan@gmail.com | Phone: +63 939 355 9261 | Location: Quezon City, Philippines</p>
-      <p>LinkedIn: linkedin.com/in/mark-sangan-487039313/ | Portfolio: mark-sangan-portfolio.com</p>
+      <div class="header-text">
+        <h1>Mark Gerard R. Sangan</h1>
+        <p>Email: mark01.sangan@gmail.com | Phone: +63 939 355 9261 | Location: Quezon City, Philippines</p>
+        <p>LinkedIn: linkedin.com/in/mark-sangan-487039313/ | Portfolio: mark-sangan-portfolio.com</p>
+      </div>
+      <img src="resume.png" alt="Profile Picture" class="profile-pic">
     </header>
 
     <section>
