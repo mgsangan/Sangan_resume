@@ -11,24 +11,23 @@
       padding: 0;
       background: #f0f2f5;
       color: #2c2c2c;
-      line-height: 1.6;
+      line-height: 1.4; /* slightly tighter line spacing */
     }
 
     .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 40px;
+      margin: 20px auto;
+      padding: 30px;
       background: #ffffff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
 
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 20px;
+      padding-bottom: 15px;
       border-bottom: 2px solid #e0e0e0;
     }
 
@@ -38,16 +37,15 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 2em;
       color: #1a1a1a;
     }
     header p {
-      margin: 5px 0;
-      font-size: 15px;
+      margin: 3px 0;
+      font-size: 14px;
       color: #555;
     }
 
-    /* Profile Picture */
     .profile-pic {
       width: 192px;   /* 2 inches at 96dpi */
       height: 192px;  /* 2 inches at 96dpi */
@@ -58,24 +56,24 @@
     }
 
     section h2 {
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #1a1a1a;
       border-bottom: 2px solid #0077b6;
-      padding-bottom: 6px;
-      margin-bottom: 15px;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     section {
-      margin: 25px 0;
+      margin: 20px 0;
     }
     ul {
       list-style: none;
       padding: 0;
     }
     ul li {
-      margin: 12px 0;
+      margin: 8px 0;
     }
     .job-title {
       font-weight: bold;
@@ -84,18 +82,52 @@
     .date {
       font-style: italic;
       color: #777;
-      margin-left: 8px;
+      margin-left: 6px;
     }
 
     .summary {
-      font-size: 15px;
+      font-size: 14px;
       color: #444;
       text-align: justify;
+    }
+
+    /* Print settings */
+    @media print {
+      body {
+        background: #fff;
+      }
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 20px;
+      }
+      @page {
+        size: A4; /* standard paper size */
+        margin: 1cm; /* adjust margins to fit one page */
+      }
+    }
+
+    /* Download Button */
+    .download-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      background: #0077b6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .download-btn:hover {
+      background: #005f87;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="resume">
+    <button class="download-btn" onclick="window.print()">Download as PDF</button>
     <header>
       <div class="header-text">
         <h1>Mark Gerard R. Sangan</h1>
@@ -127,6 +159,11 @@
   <h2>Education</h2>
   <ul>
     <li>
+      <strong>Academic Track (Science, Technology, Engineering, and Mathematics) - University of the East (Caloocan)</strong> 
+      <span class="date">(2019-2021)</span>
+      
+    </li>
+    <li>
       <strong>Bachelor of Science in Computer Engineering - University of the East</strong> 
       <span class="date">(2021-2026)</span>
       <p>Relevant coursework: Artificial Intelligence, Computer Networks, Data Structures, and Systems Security.</p>
@@ -139,8 +176,16 @@
   </ul>
 </section>
 
-
-
+    <section>
+      <h2>Academic Project</h2>
+      <ul>
+        <li>
+          <span class="job-title">AI-Driven System for Advance Detection, Measurement and Repair of Road Potholes</span>
+          <p>Developed a prototype system that uses machine learning algorithms to detect and measure road potholes, enabling efficient repair planning with Lidar Sensor.</p>
+        </li>
+      </ul>
+    </section>
+    
     <section>
       <h2>Skills</h2>
       <ul>
@@ -149,16 +194,6 @@
         <li>Computer Networks</li>
         <li>Systems Security</li>
         <li>Problem-Solving & Troubleshooting</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Project</h2>
-      <ul>
-        <li>
-          <span class="job-title">AI-Driven System for Advance Detection, Measurement and Repair of Road Potholes</span>
-          <p>Developed a prototype system that uses machine learning algorithms to detect and measure road potholes, enabling efficient repair planning with Lidar Sensor.</p>
-        </li>
       </ul>
     </section>
   </div>
